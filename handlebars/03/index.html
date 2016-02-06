@@ -26,11 +26,12 @@
 <script id="student_item_template" type="text/x-handlebars-template">
     {{#each this}}
       <tr>
+        <td>
             {{#each info}}
-              <td>
+
                 {{../name}}的{{this}}
             {{/each}}
-              </td>
+        </td>
       </tr>
     {{/each}}
 </script>
