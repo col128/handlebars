@@ -5,10 +5,12 @@
     <title>引入handlebars</title>
 </head>
 <link rel="stylesheet" href="../../dist/css/bootstrap.css">
+<link rel="stylesheet" href="../common.css">
 <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../../node_modules/handlebars/dist/handlebars.js"></script>
 <script src="data.js"></script>
 <script src="index.js"></script>
+
 <body>
   <div class="container">
 
@@ -27,16 +29,24 @@
   </div>
 </body>
 <script id="student_item_template" type="text/x-handlebars-template">
-  //让我注释一下吧！！
+  // //的注释不会出现在生成的模型中
+  <!--会显示在生成的HTML中-->
     {{#each student}}
-  //让我注释一下吧！！
-      <tr>
-        <td>{{@index}}</td>
-        <td>{{name}}</td>
-        <td>{{sex}}</td>
-        <td>{{age}}</td>
-      </tr>
-  //让我注释一下吧！！
+      {{#compare age 20}}
+            <tr>
+              <td>{{@index}}</td>
+              <td>{{name}}</td>
+              <td>{{sex}}</td>
+              <td>{{age}}</td>
+            </tr>
+      {{else}}
+            <tr>
+              <td>{{@index}}</td>
+              <td>{{name}}</td>
+              <td>{{sex}}</td>
+              <td>小孩子</td>
+            </tr>
+      {{/compare}}
     {{/each}}
 </script>
 </html>
