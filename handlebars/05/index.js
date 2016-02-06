@@ -17,6 +17,18 @@ $(function () {
       return options.inverse(this);
     }
   })
+
+  Handlebars.registerHelper("isMan", function (v1,options) {
+    if (v1==1)
+    {
+      return options.fn(this);
+    }
+    else
+    {
+      return options.inverse(this);
+    }
+  })
+
   var template= Handlebars.compile(source);
   var result = template(data);
   $("#student-table-body").html(result);

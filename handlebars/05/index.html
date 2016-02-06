@@ -32,21 +32,23 @@
   // //的注释不会出现在生成的模型中
   <!--会显示在生成的HTML中-->
     {{#each student}}
-      {{#compare age 20}}
             <tr>
-              <td>{{@index}}</td>
-              <td>{{name}}</td>
-              <td>{{sex}}</td>
-              <td>{{age}}</td>
+                  <td>{{@index}}</td>
+                  <td>{{name}}</td>
+
+                  {{#isMan sex}}
+                      <td>男</td>
+                  {{else}}
+                      <td>女</td>
+                  {{/isMan}}
+
+
+                  {{#compare age 20}}
+                        <td>{{age}}</td>
+                  {{else}}
+                        <td>小孩子</td>
+                  {{/compare}}
             </tr>
-      {{else}}
-            <tr>
-              <td>{{@index}}</td>
-              <td>{{name}}</td>
-              <td>{{sex}}</td>
-              <td>小孩子</td>
-            </tr>
-      {{/compare}}
     {{/each}}
 </script>
 </html>
