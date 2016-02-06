@@ -53,8 +53,6 @@
     "grunt-jscs": "~2.3.0",
     "grunt-saucelabs": "~8.6.1",
     "grunt-sed": "twbs/grunt-sed#v0.2.0",
-    "handlebars": "^4.0.5",
-    "jquery": "^2.2.0",
     "load-grunt-tasks": "~3.3.0",
     "markdown-it": "^5.0.0",
     "npm-shrinkwrap": "^200.4.0",
