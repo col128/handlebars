@@ -29,6 +29,19 @@ $(function () {
     }
   })
 
+
+  Handlebars.registerHelper("isWoman", function (sex) {
+    if (1 == sex)
+    {
+          return "男"
+    }
+    else
+    {
+          return "女"
+    }
+  });
+
+
   var template= Handlebars.compile(source);
   var result = template(data);
   $("#student-table-body").html(result);
